@@ -1,0 +1,20 @@
+Steps: Create a User Snippet for JavaScript in VS Code
+Open VS Code.
+Go to the Command Palette (Ctrl+Shift+P or Cmd+Shift+P).
+Type "snippets" and select Preferences: Configure User Snippets.
+Select JavaScript (or New Global Snippets file if you want it for all languages).
+In the opened file, add this snippet:
+
+{
+	"Console log variable (cw)": {
+		"prefix": "cw",
+		"body": [
+			"console.log(\"${1:variable}: \", ${1:variable});"
+		],
+		"description": "Console log variable with label"
+	}
+}
+
+usage:
+1. type 'cw' then press tab
+2. type in the name of the variable
