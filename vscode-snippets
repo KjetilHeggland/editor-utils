@@ -5,6 +5,7 @@ Type "snippets" and select Preferences: Configure User Snippets.
 Select JavaScript (or New Global Snippets file if you want it for all languages).
 In the opened file, add this snippet:
 
+eg.
 {
 	"Console log variable (cw)": {
 		"prefix": "cw",
@@ -17,4 +18,22 @@ In the opened file, add this snippet:
 
 usage:
 1. type 'cw' then press tab
-2. type in the name of the variable
+- will generate 'console.log("variable: ", variable);' and the cursor will be active on the variable 
+2. fill in the variable name
+
+
+
+
+
+
+snippet file:
+
+{
+	"Console log variable (cw)": {
+		"prefix": "cw",
+		"body": [
+			"console.log(\"${1:variable}: \", ${1:variable});"
+		],
+		"description": "Console log variable with label"
+	}
+}
